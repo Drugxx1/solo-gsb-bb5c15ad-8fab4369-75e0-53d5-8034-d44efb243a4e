@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: cutlist-optimizer
+    container_name: cutlist-optimizer
+    ports:
+      - "8080:8080"   # 如需更换访问端口，改左边的宿主机端口即可，如 "9000:8080"
+    environment:
+      PORT: 8080
+    restart: unless-stopped
